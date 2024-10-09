@@ -6,7 +6,7 @@ library(reshape2)
 
 train <- vroom("/Users/carsoncollins/Desktop/Stats348/AmazonEmployeeAcess/train.csv")
 test <- vroom("/Users/carsoncollins/Desktop/Stats348/AmazonEmployeeAcess/test.csv")
-
+#------------------------------------------------------------------------------#
 ggplot(train, aes(x = as.factor(ACTION))) +
   geom_bar(fill = "skyblue") +
   labs(title = "Distribution of Approved vs. Not Approved Actions",
@@ -37,4 +37,5 @@ prep <- prep(my_recipe)
 baked <- bake(prep, new_data = train)
 baked
 ncol(baked)
+#------------------------------------------------------------------------------#
 
